@@ -4,7 +4,7 @@ Hi! I'm **Rahul Singh Dhakad**. this is the Frontend of the Ecommerce site
 
 ## Install Dependencies
 
-**for frontend**  - `npm i &&  npm run build && npm run dev`
+**for frontend**  - `npm i &&  npm run build `
 
 ## Env Variables
 
