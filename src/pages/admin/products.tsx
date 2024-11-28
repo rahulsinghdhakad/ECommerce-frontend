@@ -1,14 +1,13 @@
 import { ReactElement, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { FaPlus } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Column } from "react-table";
 import AdminSidebar from "../../components/admin/AdminSidebar";
 import TableHOC from "../../components/admin/TableHOC";
 import { useAllProductQuery } from "../../redux/api/productApi";
-import { useSelector } from "react-redux";
-import { UserReducerInitialState } from "../../types/reducer-types";
 import { RootState, server } from "../../redux/store";
-import toast from "react-hot-toast";
 import { CustomError } from "../../types/api-types";
 
 interface DataType {
@@ -45,7 +44,7 @@ const columns: Column<DataType>[] = [
 const Products = () => {
   const { user } = useSelector((store: RootState) => store.userReducer)
 
-  const { data, isLoading, isError, error } = useAllProductQuery(user?._id!)
+  const { data, isError, error } = useAllProductQuery(user?._id!)
 
   if(isError){
     toast.error((error as CustomError).data.message)

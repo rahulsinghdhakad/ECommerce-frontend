@@ -1,5 +1,5 @@
 import { ReactElement } from "react"
-import { Navigate, Outlet, redirect } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 
 interface Props {
   isAuthenticated: boolean,

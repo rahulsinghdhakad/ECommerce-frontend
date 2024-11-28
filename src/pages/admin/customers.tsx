@@ -46,57 +46,10 @@ const columns: Column<DataType>[] = [
   },
 ];
 
-const img = "https://randomuser.me/api/portraits/women/54.jpg";
-const img2 = "https://randomuser.me/api/portraits/women/50.jpg";
-
-const arr: Array<DataType> = [
-  {
-    avatar: (
-      <img
-        style={{
-          borderRadius: "50%",
-        }}
-        src={img}
-        alt="Shoes"
-      />
-    ),
-    name: "Emily Palmer",
-    email: "emily.palmer@example.com",
-    gender: "female",
-    role: "user",
-    action: (
-      <button>
-        <FaTrash />
-      </button>
-    ),
-  },
-
-  {
-    avatar: (
-      <img
-        style={{
-          borderRadius: "50%",
-        }}
-        src={img2}
-        alt="Shoes"
-      />
-    ),
-    name: "May Scoot",
-    email: "aunt.may@example.com",
-    gender: "female",
-    role: "user",
-    action: (
-      <button>
-        <FaTrash />
-      </button>
-    ),
-  },
-];
-
 const Customers = () => {
   const { user } = useSelector((store: RootState) => store.userReducer)
 
-  const { data, isLoading, isError, error } = useAllUsersQuery(user?._id!)
+  const { data, isError, error } = useAllUsersQuery(user?._id!)
 
   if (isError) {
     toast.error((error as CustomError).data.message)
