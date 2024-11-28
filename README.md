@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Welcome to Ecommerce Frontend!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! I'm **Rahul Singh Dhakad**. this is the Frontend of the Ecommerce site
 
-Currently, two official plugins are available:
+## Install Dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**for frontend**  - `npm i &&  npm run build && npm run dev`
 
-## Expanding the ESLint configuration
+## Env Variables
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Make Sure to Create a .env file in root directory and add appropriate variables in order to use the app
 
-- Configure the top-level `parserOptions` property like this:
+**Essential Variable**
+  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+VITE_API_KEY= `from firebase`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+VITE_AUTH_DOMAIN= `from firebase`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+VITE_PROJECT_ID= `from firebase`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+VITE_STORAGE_BUCKET= `from firebase`
+
+VITE_MESSAGING_SENDER_ID= `from firebase`
+
+VITE_APP_ID= `from firebase`
+
+VITE_MEASUREMENT_ID= `from firebase`
+
+VITE_SERVER= `https://ecommerce-backend-quzz.onrender.com`
+
+VITE_STRIPE_KEY= `from stripe`
+
+## Author
+**LinkedIn** Click [Here](https://www.linkedin.com/in/rahul-singh-dhakad-4533a6260/) **@rahul-singh-dhakad-4533a6260**
+
