@@ -1,0 +1,46 @@
+.cart{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: calc(100vh - 10rem);
+
+    main{
+        @include flex(column,flex-start,stretch);
+        .cart-box{
+            padding: 1rem;
+            @include flex(row,unset);
+            div{
+                flex-grow: 2;
+                display: flex;
+                flex-direction: column;
+            }
+            button{
+                @include button(2rem);
+            }
+            img{
+                width: 5rem;
+            }
+        }
+    }
+
+    aside{
+        display: grid;
+        place-items: center;
+        >div{
+            @include flex(column,center,flex-start);
+            input{
+                padding: 5px;
+            }
+        }
+        .check-out-btn{
+            background-color: rgb(37, 156, 196);
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            &:hover{
+                background-color: rgb(52, 116, 138);
+            }
+            border-radius: 10px;
+        }
+    }
+}

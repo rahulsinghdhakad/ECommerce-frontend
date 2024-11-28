@@ -1,0 +1,40 @@
+.login{
+    @include flex;
+    main{
+        width: 40%;
+        padding: 2rem;
+        @include flex(column,center,stretch,2rem);
+        h1{
+            @include heading;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        >div{
+            @include flex(column,center,stretch,0.5rem);
+            p{
+                text-align: center;
+            }
+            >input,select,button{
+                padding:12px;
+            }
+            button{
+                cursor: pointer;
+                padding: 0;
+               display: flex;
+               >svg{
+                align-self: center;
+                    font-size: 2rem;
+               }
+               >span{
+                color: white;
+                flex-grow: 2;
+                padding: 12px;
+                background-color: rgb(29, 176, 216);
+               }
+               border: none;
+
+            }
+        }
+    }
+}

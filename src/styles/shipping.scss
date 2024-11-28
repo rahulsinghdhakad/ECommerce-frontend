@@ -1,0 +1,33 @@
+.shipping{
+    display: grid;
+    place-items: center;
+    >button{
+        position: fixed;
+        top: 4rem;
+        left:1rem;
+        @include button(2rem);
+    }
+    >form{
+        padding-top: 4rem;
+        width: 25%;
+        @include flex(column,center,stretch);
+        >h1{
+            text-align: center;
+            margin-bottom: 2rem;
+            @include heading;
+            font-weight: 500;
+        }  
+        >input,
+        >select{
+            padding: 12px;
+            border: 1px solid grey;
+        } 
+        >button{
+            padding: 14px;
+            border: none;
+            background-color: rgb(93, 186, 217);
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
