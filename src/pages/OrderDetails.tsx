@@ -31,7 +31,7 @@ const OrderDetails = () => {
   const param = useParams();
   const orderID = param.id
 
-  const { data, isError, isLoading, error } = useOrderDetailQuery(orderID!)
+  const { data, isError } = useOrderDetailQuery(orderID!)
 
   if (isError) return <Navigate to={'/404'} />
 
@@ -43,7 +43,6 @@ const OrderDetails = () => {
       country,
       pinCode,
     },
-    _id,
     user: {
       name,
     },
