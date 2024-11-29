@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { useDeleteOrderMutation, useOrderDetailQuery, useUpdateOrderMutation } from "../../../redux/api/orderApi";
-import { server } from "../../../redux/store";
 import { UserReducerInitialState } from "../../../types/reducer-types";
 import { Order, OrderItem } from "../../../types/types";
 import { resToast } from "../../../utils/feature";
