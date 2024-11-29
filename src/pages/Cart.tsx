@@ -70,8 +70,8 @@ const Cart = () => {
           <p>Subtoal: ${subtotal}</p>
           <p>Shipping Charges: ${shippingCharges}</p>
           <p>tax: ${tax}</p>
-          <p>Discount: {discount}</p>
-          <strong>total: {total}</strong>
+          <p>Discount: ${discount}</p>
+          <strong>total: ${total}</strong>
 
           <input 
           type="text"

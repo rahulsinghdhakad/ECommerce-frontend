@@ -32,6 +32,8 @@
   img {
     display: flex;
     width: 12rem;
+    height: 12rem;
+    object-fit: contain;
   }
   p {
     padding: 4px;

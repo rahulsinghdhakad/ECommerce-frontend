@@ -5,6 +5,7 @@ import { BarChart } from "../../../components/admin/Charts";
 import { useBarQuery } from "../../../redux/api/dashboardApi";
 import { RootState } from "../../../redux/store";
 import { getLastMonts } from "../../../utils/feature";
+import Loader from "../../../components/Loader";
 
 const Barcharts = () => {
   const { user } = useSelector((state: RootState) => state.userReducer);
@@ -22,7 +23,7 @@ const Barcharts = () => {
       <main className="chart-container">
         {
           isLoading
-            ? <>Loader</>
+            ? <Loader/>
             : (<>
               <h1>Bar Charts</h1>
               <section>

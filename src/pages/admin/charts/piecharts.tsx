@@ -4,6 +4,7 @@ import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { DoughnutChart, PieChart } from "../../../components/admin/Charts";
 import { usePieQuery } from "../../../redux/api/dashboardApi";
 import { RootState } from "../../../redux/store";
+import Loader from "../../../components/Loader";
 
 const PieCharts = () => {
   const { user } = useSelector((state: RootState) => state.userReducer);
@@ -20,7 +21,7 @@ const PieCharts = () => {
       <main className="chart-container">
         {
           isLoading
-            ? <>Loader</>
+            ? <Loader/>
             : (<>
               <h1>Pie & Doughnut Charts</h1>
               <section>

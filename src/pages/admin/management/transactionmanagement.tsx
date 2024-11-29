@@ -95,7 +95,7 @@ const TransactionManagement = () => {
               key={i._id}
               _id={i._id}
               name={i.name}
-              photo={`${server}/${i.photo}`}
+              photo={i.photo}
               productID={i._id}
               quantity={i.quantity}
               price={i.price}
@@ -144,7 +144,7 @@ const TransactionManagement = () => {
   );
 };
 
-const ProductCard = ({
+export const ProductCard = ({
   name,
   photo,
   price,
@@ -152,7 +152,7 @@ const ProductCard = ({
   productID,
 }: OrderItem) => (
   <div className="transaction-product-card">
-    <img src={`${server}/${photo}`} alt={name} />
+    <img src={photo} alt={name} />
     <Link to={`/product/${productID}`}>{name}</Link>
     <span>
       ₹{price} X {quantity} = ₹{price * quantity}

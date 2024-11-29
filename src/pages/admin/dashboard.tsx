@@ -10,6 +10,7 @@ import Table from "../../components/admin/DashboardTable";
 import { useStatsQuery } from "../../redux/api/dashboardApi";
 import { RootState } from "../../redux/store";
 import { getLastMonts } from "../../utils/feature";
+import Loader from "../../components/Loader";
 
 const userImg =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp";
@@ -31,7 +32,7 @@ const Dashboard = () => {
       <main className="dashboard">
         {
           isLoading
-            ? <>Loader</>
+            ? <Loader/>
             : (<>
               <div className="bar">
                 <BsSearch />

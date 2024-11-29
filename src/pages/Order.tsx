@@ -7,6 +7,7 @@ import TableHOC from "../components/admin/TableHOC";
 import { useMyOrderQuery } from "../redux/api/orderApi";
 import { RootState } from "../redux/store";
 import { CustomError } from "../types/api-types";
+import Loader from "../components/Loader";
 
 interface DataType {
     _id: string;
@@ -68,7 +69,7 @@ const Order = () => {
                             ? "purple"
                             : "green"
                 }>{i.status}</span>,
-                action: <Link to={`/order/${i._id}`}>Manage</Link>,
+                action: <Link to={`/order/${i._id}`}>Details</Link>,
             })))
         }
     }, [data])
@@ -86,8 +87,9 @@ const Order = () => {
             <h1>My Orders</h1>
             {
                 isLoading
-                    ? <>Loader</>
-                    : table}
+                    ? <Loader/>
+                    : table
+            }
         </div>
     )
 }

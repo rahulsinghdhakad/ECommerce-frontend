@@ -1,11 +1,10 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
-import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { useSelector } from "react-redux";
-import { UserReducerInitialState } from "../../../types/reducer-types";
-import { useDeleteProductMutation, useProductDetailsQuery, useUpdateProductMutation } from "../../../redux/api/productApi";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { server } from "../../../redux/store";
+import AdminSidebar from "../../../components/admin/AdminSidebar";
+import { useDeleteProductMutation, useProductDetailsQuery, useUpdateProductMutation } from "../../../redux/api/productApi";
+import { UserReducerInitialState } from "../../../types/reducer-types";
 import { resToast } from "../../../utils/feature";
 
 const Productmanagement = () => {
@@ -93,7 +92,7 @@ const Productmanagement = () => {
       <main className="product-management">
         <section>
           <strong>ID - {`${data?.product._id}`}</strong>
-          <img src={`${server}/${photo}`} alt="Product" />
+          <img src={photo} alt="Product" />
           <p>{nameUpdate}</p>
           {stockUpdate > 0 ? (
             <span className="green">{stockUpdate} Available</span>

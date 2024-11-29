@@ -5,6 +5,7 @@ import { LineChart } from "../../../components/admin/Charts";
 import { useLineQuery } from "../../../redux/api/dashboardApi";
 import { RootState } from "../../../redux/store";
 import { getLastMonts } from "../../../utils/feature";
+import Loader from "../../../components/Loader";
 
 
 const Linecharts = () => {
@@ -23,7 +24,7 @@ const Linecharts = () => {
       <main className="chart-container">
         {
           isLoading
-            ? <>Loader</>
+            ? <Loader/>
             : (<>
               <h1>Line Charts</h1>
               <section>
